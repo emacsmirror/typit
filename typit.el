@@ -143,8 +143,8 @@ If no dictionary is loaded, it's NIL.")
 (defun typit--pick-word (num)
   "Pick a word from `typit--dict'.
 
-Use the first NUM words from loaded dictionary (if NUM is bigger
-than the length of the dictionary, use all words).  All words in
+Use the first NUM words from the loaded dictionary (if NUM is
+bigger than the length of the dictionary, use all words).  All words in
 `typit--dict' have approximately the same probability."
   (elt typit--dict (random (min num (length typit--dict)))))
 
@@ -152,7 +152,7 @@ than the length of the dictionary, use all words).  All words in
   "Generate a line of an appropriate length picking random words.
 
 NUM is the number of words to use from the loaded dictionary (if
-NUM is bigger than length of the dictionary, use all words).
+NUM is bigger than the length of the dictionary, use all words).
 
 This uses the words from `typit--dict', which should be
 initialized by the time the function is called.  The result is
@@ -315,8 +315,8 @@ use as argument of `typit-test' if the user chooses to play again."
 (defun typit-test (num)
   "Run a typing test using the NUM most common words from the dictionary.
 
-Dictionary is an array of words in `typit-dict'.  By default it's
-English words ordered from most common to least common."
+The dictionary is an array of words in `typit-dict'.  By default
+it's English words ordered from most common to least common."
   (interactive "p")
   (typit--prepare-dict)
   (let ((first-line   (typit--generate-line num))

@@ -54,7 +54,7 @@ To access these, type `M-x customize-group RET typit RET`.
 
 ## Contribution
 
-If you would like to improve this package, PR and issues are welcome. Also,
+If you would like to improve this package, PRs and issues are welcome. Also,
 it is OK to add dictionaries for other languages than English. To do so, you
 need to create a text file named `your-language.txt` and put it under the
 `dict` directory. That file should contain the 1000 most common words of the
